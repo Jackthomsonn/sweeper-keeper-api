@@ -18,6 +18,6 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => res.send('Alright mate?'));
-app.get('/fixtures', controllers.fixtures.getFixtures);
+app.get('/fixtures/:groupName', controllers.fixtures.getFixtures);
 
 app.listen(config.port, () => console.log('Sweeper keeper running on port ' + config.port));

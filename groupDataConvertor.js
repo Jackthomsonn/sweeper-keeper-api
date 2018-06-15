@@ -1,10 +1,15 @@
-function convertApiDataToGroupResponse( teamResults, groupLetter, response) {
-    var groupResponse = new GroupResponse();
+require('./GroupResponse.js');
 
+module.exports.convertApiDataToGroupResponse = (teamResults, groupLetter, response) => {
+    convertApiDataToGroupResponse( teamResults, groupLetter, response);
+}
+
+function convertApiDataToGroupResponse( teamResults, groupLetter, response) {
+    var groupResponse = new GroupResponse("Group " + groupLetter);
+    
     var teamResultsForSelectedGroup = teamResults.filter(entry => entry.group_letter === groupLetter);
 
     if (teamResultsForSelectedGroup.length != 0) {
-        groupResponse.groupName = "Group " + groupLetter;
         var tableTeams = [];
 
         teamResultsForSelectedGroup.forEach((team) => {
@@ -19,9 +24,48 @@ function convertApiDataToGroupResponse( teamResults, groupLetter, response) {
             groupTableEntry.goalAgainst = team.goals_against;
             groupTableEntry.goalDifference = team.goal_differential;
 
-            tableTeams.add(groupTableEntry);
+            tableTeams.push(groupTableEntry);
         })
 
+        groupResponse.table = tableTeams;
     }
     response.send(JSON.stringify(groupResponse));
+}
+
+class GroupResponse {
+    constructor(groupName) {
+        this.groupName = groupName;
+        this.fixtures = [];
+        this.table = [];
+    }
+}
+
+class Fixture {
+    constructor(team1, team2) {
+        this.team1 = team1;
+        this.team2 = team2;
+    }
+}
+
+class FixtureTeam {
+    constructor() {
+        this.name = undefined;
+        this.owner = undefined;
+        this.goals = undefined;
+        this.flag = undefined;
+    }
+}
+
+class GroupTableEntry {
+    constructor() {
+        this.name = undefined;
+        this.owner = undefined;
+        this.wins = undefined;
+        this.draws = undefined;
+        this.losses = undefined;
+        this.goalsFor = undefined;
+        this.goalAgainst = undefined;
+        this.goalDifference = undefined;
+        this.points = undefined;
+    }
 }
