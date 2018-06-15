@@ -1,2 +1,6 @@
 port: 4201
 worldCupUrl: http://worldcup.sfg.io
+
+teams:
+  RUS: Dan
+  ENG: Mike

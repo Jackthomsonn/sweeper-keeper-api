@@ -31,6 +31,7 @@ class GroupTableEntry {
         this.losses = undefined;
         this.goalsFor = undefined;
         this.goalAgainst = undefined;
+        this.goalDifference = undefined;
         this.points = undefined;
     }
 }
