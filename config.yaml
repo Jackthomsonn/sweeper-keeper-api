@@ -2,38 +2,38 @@ port: 4201
 worldCupUrl: http://worldcup.sfg.io
 
 owners:
-  KOR : Steve
+  CRC : Steve
   TUN : Steve
-  AUS : Steve
-  SWE : Jack
-  SRB : Jack
+  CRO : Steve
+  PER : Jack
   EGY : Jack
-  ARG : Dan
-  ENG : Dan
-  PAN : Dan
-  PER : Alun
-  JPN : Alun
-  POR : Alun
-  MAR : Liam
-  URU : Liam
-  BEL : Liam
-  ESP : Mike
-  POL : Mike
-  CRO : Mike
-  MEX : Gertrude
-  SUI : Gertrude
-  NGA : Gertrude
-  SEN : Andy
-  DEN : Andy
-  IRN : Andy
-  BRA : Rob
+  MEX : Jack
+  KSA : Dan
+  BEL : Dan
+  POR : Dan
+  NGA : Alun
+  SRB : Alun
+  SWE : Alun
+  DEN : Liam
+  ESP : Liam
+  IRN : Liam
+  ARG : Mike
+  ISL : Mike
+  SEN : Mike
+  URU : Gertrude
+  ENG : Gertrude
+  AUS : Gertrude
+  PAN : Andy
+  SUI : Andy
+  GER : Andy
+  FRA : Rob
   COL : Rob
-  ISL : Rob
-  GER : Dave
-  FRA : Dave
-  RUS : Dave
-  CRC : Jon
-  KSA : Jon
+  POL : Rob
+  KOR : Dave
+  MAR : Dave
+  RUS : Jon
+  BRA : Jon
+  JPN : Jon
 
 flags:
   RUS : U+1F1F7 U+1F1FA

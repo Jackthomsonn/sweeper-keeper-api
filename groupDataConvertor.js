@@ -5,12 +5,12 @@ const config = YAML.load('./config.yaml');
 const _ = require('lodash');
 
 module.exports.convertApiDataToGroupResponse = (teamResults, groupLetter, response) => {
-    convertApiDataToGroupResponse( teamResults, groupLetter, response);
+    convertApiDataToGroupResponse(teamResults, groupLetter, response);
 }
 
-function convertApiDataToGroupResponse( teamResults, groupLetter, response) {
+function convertApiDataToGroupResponse(teamResults, groupLetter, response) {
     var groupResponse = new GroupResponse("Group " + groupLetter);
-    
+
     var teamResultsForSelectedGroup = teamResults.filter(entry => entry.group_letter === groupLetter);
 
     if (teamResultsForSelectedGroup.length != 0) {
@@ -32,9 +32,7 @@ function convertApiDataToGroupResponse( teamResults, groupLetter, response) {
             tableTeams.push(groupTableEntry);
         })
 
-        _.sortBy(tableTeams, (a, b) => {
-            return a.points > b.points;
-        });
+        tableTeams = _.sortBy(tableTeams, ['points', 'goalDifference']).reverse();
 
         groupResponse.table = tableTeams;
 
