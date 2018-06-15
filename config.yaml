@@ -1,6 +1,70 @@
 port: 4201
 worldCupUrl: http://worldcup.sfg.io
 
-teams:
-  RUS: Dan
-  ENG: Mike
+owners:
+  KOR : Steve
+  TUN : Steve
+  AUS : Steve
+  SWE : Jack
+  SRB : Jack
+  EGY : Jack
+  ARG : Dan
+  ENG : Dan
+  PAN : Dan
+  PER : Alun
+  JPN : Alun
+  POR : Alun
+  MAR : Liam
+  URU : Liam
+  BEL : Liam
+  ESP : Mike
+  POL : Mike
+  CRO : Mike
+  MEX : Gertrude
+  SUI : Gertrude
+  NGA : Gertrude
+  SEN : Andy
+  DEN : Andy
+  IRN : Andy
+  BRA : Rob
+  COL : Rob
+  ISL : Rob
+  GER : Dave
+  FRA : Dave
+  RUS : Dave
+  CRC : Jon
+  KSA : Jon
+
+flags:
+  RUS : U+1F1F7 U+1F1FA
+  KSA : U+1F1F8 U+1F1E6
+  EGY : U+1F1EA U+1F1EC
+  URU : U+1F1FA U+1F1FE
+  POR : U+1F1F5 U+1F1F9
+  ESP : U+1F1EA U+1F1F8
+  MAR : U+1F1F2 U+1F1E6
+  IRN : U+1F1EE U+1F1F7
+  FRA : U+1F1EB U+1F1F7
+  AUS : U+1F1E6 U+1F1FA
+  PER : U+1F1F5 U+1F1EA
+  DEN : U+1F1E9 U+1F1F0
+  ARG : U+1F1E6 U+1F1F7
+  ISL : U+1F1EE U+1F1F8
+  CRO : U+1F1ED U+1F1F7
+  NGA : U+1F1F3 U+1F1EC
+  BRA : U+1F1E7 U+1F1F7
+  SUI : U+1F1E8 U+1F1ED
+  CRC : U+1F1E8 U+1F1F7
+  SRB : U+1F1F7 U+1F1F8
+  GER : U+1F1E9 U+1F1EA
+  MEX : U+1F1F2 U+1F1FD
+  SWE : U+1F1F8 U+1F1EA
+  KOR : null
+  BEL : U+1F1E7 U+1F1EA
+  PAN : U+1F1F5 U+1F1E6
+  TUN : U+1F1F9 U+1F1F3
+  ENG : null
+  POL : U+1F1F5 U+1F1F1
+  JPN : U+1F1EF U+1F1F5
+  COL : U+1F1E8 U+1F1F4
+  SEN : U+1F1F8 U+1F1F3
