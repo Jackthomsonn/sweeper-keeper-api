@@ -35,6 +35,7 @@ function convertApiDataToGroupResponse( teamResults, groupLetter, response) {
 
     fixturesByGroupController.getFixturesByGroupName(groupLetter, (fixtures) => {
         groupResponse.fixtures = fixtures;
+        response.setHeader('Content-Type', 'application/json');
         response.send(JSON.stringify(groupResponse));
     })
 }
