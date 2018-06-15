@@ -1,4 +1,5 @@
 require('./GroupResponse.js');
+const fixturesByGroupController = require('./routes/fixturesByGroup.controller');
 
 module.exports.convertApiDataToGroupResponse = (teamResults, groupLetter, response) => {
     convertApiDataToGroupResponse( teamResults, groupLetter, response);
@@ -28,8 +29,14 @@ function convertApiDataToGroupResponse( teamResults, groupLetter, response) {
         })
 
         groupResponse.table = tableTeams;
+
+
     }
-    response.send(JSON.stringify(groupResponse));
+
+    fixturesByGroupController.getFixturesByGroupName(groupLetter, (fixtures) => {
+        groupResponse.fixtures = fixtures;
+        response.send(JSON.stringify(groupResponse));
+    })
 }
 
 class GroupResponse {
