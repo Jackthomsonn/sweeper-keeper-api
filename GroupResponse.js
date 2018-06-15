@@ -1,3 +1,8 @@
+module.exports.GroupResponse;
+module.exports.Fixture;
+module.exports.FixtureTeam;
+module.exports.GroupTableEntry;
+
 class GroupResponse {
     constructor(groupName) {
         this.groupName = groupName;
