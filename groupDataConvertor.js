@@ -2,6 +2,7 @@ require('./GroupResponse.js');
 const fixturesByGroupController = require('./routes/fixturesByGroup.controller');
 const YAML = require('yamljs');
 const config = YAML.load('./config.yaml');
+const _ = require('lodash');
 
 module.exports.convertApiDataToGroupResponse = (teamResults, groupLetter, response) => {
     convertApiDataToGroupResponse( teamResults, groupLetter, response);
@@ -30,6 +31,10 @@ function convertApiDataToGroupResponse( teamResults, groupLetter, response) {
 
             tableTeams.push(groupTableEntry);
         })
+
+        _.sortBy(tableTeams, (a, b) => {
+            return a.points > b.points;
+        });
 
         groupResponse.table = tableTeams;
 
