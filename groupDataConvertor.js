@@ -1,5 +1,7 @@
 require('./GroupResponse.js');
 const fixturesByGroupController = require('./routes/fixturesByGroup.controller');
+const YAML = require('yamljs');
+const config = YAML.load('./config.yaml');
 
 module.exports.convertApiDataToGroupResponse = (teamResults, groupLetter, response) => {
     convertApiDataToGroupResponse( teamResults, groupLetter, response);
@@ -24,6 +26,7 @@ function convertApiDataToGroupResponse( teamResults, groupLetter, response) {
             groupTableEntry.goalsFor = team.goals_for;
             groupTableEntry.goalAgainst = team.goals_against;
             groupTableEntry.goalDifference = team.goal_differential;
+            groupTableEntry.owner = config.owners[team.fifa_code];
 
             tableTeams.push(groupTableEntry);
         })
