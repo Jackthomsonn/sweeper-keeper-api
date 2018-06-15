@@ -1,7 +1,7 @@
 const YAML = require('yamljs');
 const config = YAML.load('./config.yaml');
 var request = require('request');
-var groupDataConvertor = require('../GroupDataConvertor.js')
+var groupDataConvertor = require('../groupDataConvertor.js')
 
 module.exports.getFixtures = (req, res) => {
     request.get(config.worldCupUrl + '/teams/results', (err, response, body) => {
@@ -16,21 +16,6 @@ module.exports.getFixtures = (req, res) => {
 
         groupDataConvertor.convertApiDataToGroupResponse(JSON.parse(body), req.params.groupName, res);
     })
-}
-
-function handleApiResponse(err, response, body, res) {
-    if (err) {
-        handleError(err, res);
-        return;
-    }
-    if (response.statusCode == 404) {
-        handleNotFound(res);
-        return;
-    }
-
-    groupDataConvertor.convertApiDataToGroupResponse(JSON.parse(body), 'A', res);
-
-    //res.send(body);
 }
 
 function handleError(err, res) {

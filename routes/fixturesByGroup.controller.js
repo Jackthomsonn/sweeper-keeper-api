@@ -33,6 +33,6 @@ function getTeamDetails(teamData) {
     name: teamData.country,
     owner: config.owners ? config.owners[teamData.code] : 'Jack\'s Mum',
     goals: teamData.goals,
-    flag: config.flags ? config.flags[teamData.code] : 'U+1F3F4'
+    flag: config.flags ? config.flags[teamData.code] : '\u1F3F4'
   }
 }
